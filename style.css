@@ -11,7 +11,6 @@ body {
   display: flex;
   flex-direction: column;
 
- /* Soft pastel pink gradient */
     background: linear-gradient(
         135deg,
         #fde7f3 0%,
@@ -19,7 +18,6 @@ body {
         #f7d1ea 100%
     );
 
-    /* Keeps the background subtle and smooth */
     background-attachment: fixed;
     background-size: cover;
 }
@@ -53,67 +51,6 @@ a.button:hover {
 }
 
 /* ==========================
-   Sidebar Styles
-   ========================== */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -220px;        /* start hidden */
-  width: 220px;
-  height: 100%;
-  background-color: #2f0d68;
-  padding-top: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: left 0.3s ease-in-out;  /* smooth sliding */
-  z-index: 1000;
-  overflow-y: auto;   /* allow scrolling if content overflows */
-}
-
-/* Sidebar active: slide in */
-.sidebar.active {
-  left: 0;
-}
-
-.sidebar h2 {
-  font-family: 'Pacifico', cursive;
-  color: white;
-  margin-bottom: 30px;
-}
-
-.sidebar a {
-  text-decoration: none;
-  color: white;
-  padding: 12px 0;
-  width: 100%;
-  text-align: center;
-  transition: background 0.3s;
-}
-
-.sidebar a:hover {
-  background-color: #1d0840;
-}
-
-.hamburger {
-  position: fixed;
-  top: 15px;
-  left: 15px;         /* left side */
-  font-size: 34px;    /* larger */
-  color: #4d179a;     /* dark purple */
-  background: none;
-  border: none;
-  z-index: 1100;
-  cursor: pointer;
-  transition: transform 0.2s ease, color 0.3s ease;
-}
-
-.hamburger:hover {
-  transform: scale(1.2);
-  color: #a64dff;     /* brighter purple */
-}
-
-/* ==========================
    Content Area
    ========================== */
 .content {
@@ -128,25 +65,4 @@ a.button:hover {
   text-align: center;
 }
 
-/* Shift content when sidebar is active on small screens */
-.sidebar.active ~ .content {
-  margin-left: 220px;
-}
-
-/* Large screens: sidebar always visible, content centered */
-@media (min-width: 1200px) {
-  .sidebar { left: 0; }
- .content {
-    margin-left: 220px;                 /* room for the sidebar */
-    width: calc(100% - 220px);          /* use the remaining width */
-    align-items: center;                 /* center children horizontally */
-    text-align: center;                  /* keep headings centered */
-  }
-  .hamburger { display: none; }     /* hide hamburger on desktop */
-}
-
-/* Medium/small screens: sidebar collapsible */
-@media (max-width: 1199px) {
-  .sidebar { left: -220px; }
-  .sidebar.active { left: 0; }
 }
