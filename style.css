@@ -73,6 +73,14 @@ p {
   margin-bottom: 20px;
 }
 
+.login-logo {
+  width: 120px;        /* make it smaller */
+  max-width: 100%;     /* make sure it never overflows the container */
+  height: auto;        /* keep proportions */
+  display: block;      
+  margin: 0 auto 20px; /* center it + add space below */
+}
+
 /* Input Labels */
 .input-group label {
   display: block;
