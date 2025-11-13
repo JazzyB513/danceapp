@@ -3,23 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Greater Heights School of Dance</title>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <title>Login</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="images/Greater Heights logo (round black).png">
 </head>
 <body>
 
-  <!-- Main Content -->
-  <div class="content">
-    <h1>Welcome</h1>
-    <p>Login</p>
+<div class="login-container">
+  <h2>Login</h2>
 
-    <a href="#" class="button">Student</a>
-    <br>
-    <a href="#" class="button">Guardian</a>
+  <form action="#">
+    <div class="input-group">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Enter your username" required>
+    </div>
 
-  </div>
+    <div class="input-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+    </div>
+
+    <button type="submit" class="button login-btn">Log In</button>
+
+    <a href="#" class="forgot-link">Forgot Password?</a>
+  </form>
+</div>
 
 </body>
 </html>
