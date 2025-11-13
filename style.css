@@ -11,10 +11,17 @@ body {
   display: flex;
   flex-direction: column;
 
-  /* Gradient background cycling through multiple pinks/purples/violets */
-  background: linear-gradient(135deg, #ff99cc, #ff66b3, #a64dff, #4d179a, #9933ff, #ff99cc);
-  background-size: 1200% 1200%;
-  animation: dreamyAurora 40s ease infinite, pulseBrightness 8s ease-in-out infinite alternate;
+ /* Soft pastel pink gradient */
+    background: linear-gradient(
+        135deg,
+        #fde7f3 0%,
+        #fbdcf0 40%,
+        #f7d1ea 100%
+    );
+
+    /* Keeps the background subtle and smooth */
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 h1 {
