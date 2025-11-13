@@ -52,18 +52,6 @@ a.button:hover {
   background-color: #4d179a;
 }
 
-a.back {
-  color: #dcd5fe;
-  text-decoration: none;
-  font-size: 30px;
-  margin-top: 30px;
-  display: inline-block;
-}
-
-a.back:hover {
-  text-decoration: underline;
-}
-
 /* ==========================
    Sidebar Styles
    ========================== */
