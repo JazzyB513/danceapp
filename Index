@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Greater Heights School of Dance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+
+  <!-- Hamburger button always on page -->
+<button class="hamburger" onclick="toggleSidebar()">☰</button>
+
+<!-- Sidebar container -->
+<div id="sidebar-container"></div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <h1>Log In</h1>
+  </div>
+
+  <!-- Load sidebar JS -->
+  <script src="sidebar.js"></script>
+</body>
+</html>
