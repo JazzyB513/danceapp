@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   // fetch events JSON
-  fetch(eventsPath)
+fetch(eventsPath + '?v=' + Date.now())
     .then(r => {
       if (!r.ok) throw new Error("Failed to load schedule.json");
       return r.json();
