@@ -13,21 +13,6 @@
   <img src="images/whlogo" class="create-logo" alt="Logo">
 
   <form id="step2Form">
-
-     <div id="gaurdian-container">
-            <div class="create-group">
-              <label>Parent or Gaurdian Name</label>
-              <input type="text" name="gaurdianName[]" placeholder="First, Last">
-            </div>
-
-           <div class="relationship-group">
-             <label>Realtionship</label>
-             <input type="dropdown" name="relationship" placeholder="Mother">
-          </div>
-          
-          <button type="button" id="add-gaurdian-btn" class="btn">
-            + Add Another Student
-          </button>
     
     <div id="studentFields" style="display: none;">
       <div class="create-group">
@@ -48,6 +33,10 @@
               <label>Student Name</label>
               <input type="text" name="studentName[]" placeholder="Enter your student's name">
             </div>
+
+            <div class="relationship">
+              <label>Relationship</label>
+              <input type="dropdown" name="realtionship" placeholder="Mother">
           </div>
           
           <button type="button" id="add-student-btn" class="btn">
