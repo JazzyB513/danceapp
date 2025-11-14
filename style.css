@@ -69,6 +69,7 @@ p {
   box-shadow: 0 3px 8px rgba(0,0,0,0.08);
   transition: 0.3s ease;
   border: 2px solid transparent;
+  font-color: #4a4a4a
 }
 
 .radio:hover {
