@@ -1,6 +1,6 @@
 // calendar.js
 document.addEventListener("DOMContentLoaded", function () {
-  const eventsPath = "data/events.json"; // ensure this file exists (see below)
+  const eventsPath = "schedule.json"; // ensure this file exists (see below)
   const tabs = document.querySelectorAll(".tab");
   const modal = document.getElementById("eventModal");
   const closeBtn = modal.querySelector(".close-btn");
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // fetch events JSON
   fetch(eventsPath)
     .then(r => {
-      if (!r.ok) throw new Error("Failed to load events.json");
+      if (!r.ok) throw new Error("Failed to load schedule.json");
       return r.json();
     })
     .then(data => {
