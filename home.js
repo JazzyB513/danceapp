@@ -17,3 +17,23 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const scheduleBtn = document.getElementById("scheduleBtn");
+
+    if (scheduleBtn) {
+        scheduleBtn.addEventListener("click", function () {
+            window.location.href = "schedule.html";
+        });
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const memoryBtn = document.getElementById("memoryBtn");
+
+    if (memoryBtn) {
+        memoryBtn.addEventListener("click", function () {
+            window.location.href = "memories.html";
+        });
+    }
+});
