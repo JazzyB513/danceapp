@@ -1,48 +1,51 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const role = localStorage.getItem("role");
+    const role = localStorage.getItem("selectedRole"); // "student" or "parent"
+    
+    const studentFields = document.getElementById("studentFields");
+    const parentFields = document.getElementById("parentFields");
 
-  const studentFields = document.getElementById("studentFields");
-  const parentFields = document.getElementById("parentFields");
+    console.log("Loaded role:", role);
 
-  const addStudentBtn = document.getElementById("addStudentBtn");
-  const studentsContainer = document.getElementById("studentsContainer");
+    // Reveal correct fields
+    if (role === "student") {
+        studentFields.style.display = "block";
+    } 
+    
+    else if (role === "parent") {
+        parentFields.style.display = "block";
+        addStudentField(); // Start with one student
+    }
 
-  // Show correct fields
-  if (role === "student") {
-    studentFields.style.display = "block";
-  } else if (role === "parent") {
-    parentFields.style.display = "block";
-    addStudentEntry();
-  }
+    // Add another student button
+    const addStudentBtn = document.getElementById("addStudentBtn");
+    if (addStudentBtn) {
+        addStudentBtn.addEventListener("click", addStudentField);
+    }
+});
 
-  // Add new student entry
-  addStudentBtn?.addEventListener("click", () => {
-    addStudentEntry();
-  });
+/*  
+   Adds a new student input group
+*/
+function addStudentField() {
+    const container = document.getElementById("studentsContainer");
 
-  function addStudentEntry() {
-    const div = document.createElement("div");
-    div.classList.add("student-entry");
+    const wrapper = document.createElement("div");
+    wrapper.classList.add("create-group");
 
-    div.innerHTML = `
-      <div class="create-group">
+    wrapper.innerHTML = `
         <label>Student Name</label>
         <input type="text" name="studentName[]" required />
-      </div>
 
-      <div class="create-group">
         <label>Relationship</label>
         <select name="relationship[]" required>
-          <option value="" disabled selected>Select one...</option>
-          <option value="Mother">Mother</option>
-          <option value="Father">Father</option>
-          <option value="Guardian">Guardian</option>
-          <option value="Grandparent">Grandparent</option>
-          <option value="Sibling">Sibling</option>
+            <option value="">Select one</option>
+            <option value="Mother">Mother</option>
+            <option value="Father">Father</option>
+            <option value="Guardian">Guardian</option>
+            <option value="Step-Parent">Step-Parent</option>
+            <option value="Other">Other</option>
         </select>
-      </div>
     `;
 
-    studentsContainer.appendChild(div);
-  }
-});
+    container.appendChild(wrapper);
+}
