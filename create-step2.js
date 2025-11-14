@@ -1,42 +1,48 @@
-document.getElementById("add-student-btn").addEventListener("click", function () {
-  const container = document.getElementById("student-container");
+// Relationship options list
+const RELATIONSHIPS = [
+    "Mother",
+    "Father",
+    "Legal Guardian",
+    "Grandparent",
+    "Sibling",
+    "Aunt",
+    "Uncle",
+    "Other"
+];
 
-  const newField = document.createElement("div");
-  newField.classList.add("create-group");
-  newField.innerHTML = `
-    <label>Student Name</label>
-    <input type="text" name="studentName[]" placeholder="Enter another student name">
-  `;
+// Populate dropdown for a given select element
+function populateRelationshipDropdown(selectEl) {
+    selectEl.innerHTML = ""; // clear any existing options
+    RELATIONSHIPS.forEach(option => {
+        const opt = document.createElement("option");
+        opt.value = option;
+        opt.textContent = option;
+        selectEl.appendChild(opt);
+    });
+}
 
-  container.appendChild(newField);
+// Initial population for first student section
+document.querySelectorAll(".relationship-select").forEach(select => {
+    populateRelationshipDropdown(select);
 });
 
-document.getElementById("add-student-btn").addEventListener("click", function () {
-  const container = document.getElementById("student-container");
+// Handle adding new student entry
+document.getElementById("add-student-btn").addEventListener("click", () => {
+    const container = document.getElementById("students-container");
 
-  const newEntry = document.createElement("div");
-  newEntry.classList.add("student-entry");
+    const studentDiv = document.createElement("div");
+    studentDiv.classList.add("student-entry");
 
-  newEntry.innerHTML = `
-    <div class="create-group">
-      <label>Student Name</label>
-      <input type="text" name="studentName[]" placeholder="Enter student name" required>
-    </div>
+    studentDiv.innerHTML = `
+        <label>Student Name</label>
+        <input type="text" class="student-name" placeholder="Enter student's name" />
 
-    <div class="create-group">
-      <label>Relationship to Student</label>
-      <select name="relationship[]" required>
-        <option value="">Select relationship</option>
-        <option value="Mother">Mother</option>
-        <option value="Father">Father</option>
-        <option value="Guardian">Guardian</option>
-        <option value="Step-Parent">Step-Parent</option>
-        <option value="Grandparent">Grandparent</option>
-        <option value="Sibling">Sibling</option>
-        <option value="Other">Other</option>
-      </select>
-    </div>
-  `;
+        <label>Relationship to Student</label>
+        <select class="relationship-select"></select>
+    `;
 
-  container.appendChild(newEntry);
+    container.appendChild(studentDiv);
+
+    // Populate new dropdown
+    populateRelationshipDropdown(studentDiv.querySelector(".relationship-select"));
 });
