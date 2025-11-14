@@ -289,3 +289,21 @@ p {
   border-color: #f7d1ea;
   box-shadow: 0 0 5px rgba(247, 209, 234, 0.6);
 }
+
+/* ---------------- LOGIN PAGE FIX ---------------- */
+.login-container {
+  background: #988495;
+  padding: 40px;
+  border-radius: 15px;
+  width: 50%;
+  max-width: 480px;
+  margin: 80px auto; /* centers the login card */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.login-logo {
+  max-width: 70%;
+  height: auto;
+  margin-bottom: 20px;
+}
