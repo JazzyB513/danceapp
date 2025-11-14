@@ -35,7 +35,7 @@ p {
 }
 
 /* Generic Button Style */
-.loginBtn {
+.button {
   display: inline-block;
   margin: 10px;
   padding: 15px 25px;
@@ -48,24 +48,7 @@ p {
   font-weight: 600;
 }
 
-.loginBtn:hover {
-  background-color: #f5d6f0;
-}
-
-.videoBtn {
-  display: inline-block;
-  margin: 10px;
-  padding: 15px 25px;
-  background-color: #eeb6e5;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-size: 20px;
-  transition: background-color 0.3s ease;
-  font-weight: 600;
-}
-
-.videoBtn:hover {
+.button:hover {
   background-color: #f5d6f0;
 }
 
