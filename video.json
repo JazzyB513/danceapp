@@ -1,0 +1,29 @@
+{
+  "students": {
+    "Edin": [
+      {
+        "id": "v1",
+        "title": "Ballet Combo – Week 2",
+        "description": "Practice the adagio and across-the-floor combo.",
+        "url": "videos/ballet-week2.mp4",
+        "class": "Ballet"
+      },
+      {
+        "id": "v2",
+        "title": "Lyrical Warmup",
+        "description": "Warmup for competition season.",
+        "url": "videos/lyrical-warmup.mp4",
+        "class": "Lyrical"
+      }
+    ],
+    "Jazzy": [
+      {
+        "id": "v3",
+        "title": "Hip Hop – Isolation Drills",
+        "description": "Practice locking and popping drills.",
+        "url": "videos/isolation-drills.mp4",
+        "class": "Hip Hop"
+      }
+    ]
+  }
+}
