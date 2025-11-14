@@ -7,3 +7,13 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const payBtn = document.getElementById("payBtn");
+
+    if (payBtn) {
+        payBtn.addEventListener("click", function () {
+            window.location.href = "payment.html";
+        });
+    }
+});
