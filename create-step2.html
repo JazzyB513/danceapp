@@ -1,210 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Create Account – Step 2</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="images/brlogo">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Parent Account</title>
+    <link rel="stylesheet" href="create-account.css" />
 </head>
 <body>
+    <div class="container">
+        <h2>Create Parent Account</h2>
 
-<div class="create-container">
-  <img src="images/whlogo" class="create-logo" alt="Logo">
+        <!-- Student Section -->
+        <div id="students-container">
+            <div class="student-entry">
+                <label>Student Name</label>
+                <input type="text" class="student-name" placeholder="Enter student's name" />
 
-  <form id="step2Form">
-
-    <!-- ========================
-         STUDENT FIELDS
-    ========================= -->
-    <div id="studentFields" style="display: none;">
-      <div class="create-group">
-        <label for="birthday">Birthday</label>
-        <input type="date" id="birthday" name="birthday" required>
-      </div>
-
-      <div class="create-group">
-        <label for="yearsAtStudio">Years at Studio</label>
-        <input type="number" id="yearsAtStudio" name="yearsAtStudio" placeholder="1" min="0" required>
-      </div>
-    </div>
-
-    <!-- ========================
-         PARENT FIELDS
-    ========================= -->
-    <div id="parentFields" style="display: none;">
-
-      <h2 style="color:#6b5faa; margin-top:15px;">Your Student(s)</h2>
-
-      <div id="student-container">
-
-        <!-- FIRST STUDENT ENTRY -->
-        <div class="student-entry">
-          <div class="create-group">
-            <label>Student Name</label>
-            <input type="text" name="studentName[]" placeholder="Enter student name" required>
-          </div>
-
-          <div class="create-group">
-            <label>Relationship to Student</label>
-            <select name="relationship[]" required>
-              <option value="">Select relationship</option>
-              <option value="Mother">Mother</option>
-              <option value="Father">Father</option>
-              <option value="Guardian">Guardian</option>
-              <option value="Step-Parent">Step-Parent</option>
-              <option value="Grandparent">Grandparent</option>
-              <option value="Sibling">Sibling</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
+                <label>Relationship to Student</label>
+                <select class="relationship-select">
+                    <!-- JS will populate this -->
+                </select>
+            </div>
         </div>
 
-      </div>
+        <button id="add-student-btn" type="button">Add Another Student</button>
 
-      <!-- ADD STUDENT BUTTON -->
-      <button type="button" id="add-student-btn" class="btn">
-        + Add Another Student
-      </button>
-
-      <h2 style="color:#6b5faa; margin-top:25px;">Your Address</h2>
-
-      <div class="create-group">
-        <label for="address">Address</label>
-        <input type="text" id="address" name="address" placeholder="1234 Dance Lane" required>
-      </div>
-
-      <div class="create-group">
-        <label for="city">City</label>
-        <input type="text" id="city" name="city" placeholder="City" required>
-      </div>
-
-      <div class="create-group">
-        <label for="state">State</label>
-        <input type="text" id="state" name="state" placeholder="State" required>
-      </div>
-
-      <div class="create-group">
-        <label for="zipcode">Zipcode</label>
-        <input type="text" id="zipcode" name="zipcode" placeholder="Zipcode" required>
-      </div>
-
+        <button id="create-account-btn" type="submit">Create Account</button>
     </div>
 
-    <!-- ========================
-         SHARED FIELDS
-    ========================= -->
-    <div class="create-group">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="dance.is.awesome@gmail.com" required>
-    </div>
-
-    <div class="create-group">
-      <label for="phone">Phone Number</label>
-      <input type="text" id="phone" name="phone" placeholder="(555) 123-4567" required>
-    </div>
-
-    <div class="create-group">
-      <label for="createpassword">Password</label>
-      <input type="password" id="createpassword" name="createpassword" placeholder="Create a password" required>
-    </div>
-
-    <div class="create-group">
-      <label for="confirmpassword">Confirm Password</label>
-      <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Re-enter password" required>
-    </div>
-
-    <button type="submit" class="btn">Sign Up</button>
-  </form>
-</div>
-
-<!-- ============================
-     JAVASCRIPT
-=============================== -->
-<script>
-  /* --------------------------------------
-     Show Fields Based on Selected Role
-  --------------------------------------- */
-  const role = localStorage.getItem('signupRole');
-  const studentFields = document.getElementById('studentFields');
-  const parentFields = document.getElementById('parentFields');
-
-  if (role === 'student') studentFields.style.display = 'block';
-  if (role === 'parent') parentFields.style.display = 'block';
-
-  /* --------------------------------------
-     Add Additional Student (Parent Only)
-  --------------------------------------- */
-  document.getElementById("add-student-btn")?.addEventListener("click", function () {
-    const container = document.getElementById("student-container");
-
-    const newEntry = document.createElement("div");
-    newEntry.classList.add("student-entry");
-
-    newEntry.innerHTML = `
-      <div class="create-group">
-        <label>Student Name</label>
-        <input type="text" name="studentName[]" placeholder="Enter student name" required>
-      </div>
-
-      <div class="create-group">
-        <label>Relationship to Student</label>
-        <select name="relationship[]" required>
-          <option value="">Select relationship</option>
-          <option value="Mother">Mother</option>
-          <option value="Father">Father</option>
-          <option value="Guardian">Guardian</option>
-          <option value="Step-Parent">Step-Parent</option>
-          <option value="Grandparent">Grandparent</option>
-          <option value="Sibling">Sibling</option>
-          <option value="Other">Other</option>
-        </select>
-      </div>
-    `;
-
-    container.appendChild(newEntry);
-  });
-
-  /* --------------------------------------
-     Form Submission - Collect All Data
-  --------------------------------------- */
-  const firstName = localStorage.getItem('signupFirstName');
-  const lastName = localStorage.getItem('signupLastName');
-
-  const step2Form = document.getElementById('step2Form');
-  step2Form.addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    // collect students
-    const studentNames = [...document.getElementsByName("studentName[]")].map(i => i.value);
-    const relationships = [...document.getElementsByName("relationship[]")].map(i => i.value);
-
-    const formData = {
-      firstName,
-      lastName,
-      role,
-      email: document.getElementById('email').value,
-      phone: document.getElementById('phone').value,
-      password: document.getElementById('createpassword').value,
-      confirmPassword: document.getElementById('confirmpassword').value,
-      birthday: role === 'student' ? document.getElementById('birthday').value : null,
-      yearsAtStudio: role === 'student' ? document.getElementById('yearsAtStudio').value : null,
-
-      // PARENT DATA
-      students: role === 'parent' ? studentNames : null,
-      relationships: role === 'parent' ? relationships : null,
-      address: role === 'parent' ? document.getElementById('address').value : null,
-      city: role === 'parent' ? document.getElementById('city').value : null,
-      state: role === 'parent' ? document.getElementById('state').value : null,
-      zipcode: role === 'parent' ? document.getElementById('zipcode').value : null
-    };
-
-    console.log('Signup Data:', formData);
-    alert('Sign up successful! (Check console for data)');
-    localStorage.clear();
-    window.location.href = "index.html";
-  });
-</script>
-
+    <script src="create-step2.js"></script>
 </body>
 </html>
