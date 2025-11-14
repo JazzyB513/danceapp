@@ -141,14 +141,14 @@ p {
 
 /* ============================================================
    VIDEO PAGE LAYOUT
-============================================================ */
+============================================================ 
 
 .page-container {
   display: flex;
   height: 100vh;
 }
 
-/* ---------------- Sidebar ---------------- */
+/* ---------------- Sidebar ---------------- 
 .sidebar {
   width: 260px;
   background: #ffffffdd;
@@ -189,7 +189,7 @@ p {
   border-color: #8b80d0;
 }
 
-/* ---------------- Main Content ---------------- */
+/* ---------------- Main Content ---------------- 
 .main-content {
   flex: 1;
   padding: 35px;
@@ -202,7 +202,7 @@ p {
   color: #6b5faa;
 }
 
-/* ---------------- Video Grid ---------------- */
+/* ---------------- Video Grid ---------------- 
 .video-grid {
   margin-top: 25px;
   display: grid;
@@ -246,7 +246,7 @@ p {
 
 /* ============================================================
    PAYMENT PAGE
-============================================================ */
+============================================================ 
 
 .payment-container {
   max-width: 900px;
@@ -264,7 +264,7 @@ p {
   margin-bottom: 20px;
 }
 
-/* Student Card */
+/* Student Card 
 .student-card {
   background: white;
   padding: 20px;
@@ -326,7 +326,7 @@ p {
   display: none;
 }
 
-/* Payment Box */
+/* Payment Box 
 .make-payment-box {
   margin-top: 40px;
   background: #f7f5ff;
@@ -358,7 +358,7 @@ p {
 
 /* ============================================================
    SCHEDULE PAGE STYLES
-============================================================ */
+============================================================ 
 
 .event-list {
   margin-top: 25px;
@@ -382,7 +382,7 @@ p {
   background: #fff6ff;
 }
 
-/* -------- MODAL POPUP -------- */
+/* -------- MODAL POPUP -------- 
 
 .modal {
   display: none;
@@ -415,8 +415,7 @@ p {
 
 /* ============================================================
    MEMORIES PAGE
-============================================================ */
-
+============================================================ 
 #mediaGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -470,22 +469,22 @@ p {
 
 /* ============================================================
    FullCalendar & Schedule page tweaks
-============================================================ */
+============================================================ 
 
-/* ensure calendar container is visually consistent with your app */
+/* ensure calendar container is visually consistent with your app 
 #calendar .fc {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
 }
 
-/* event popover & list spacing */
+/* event popover & list spacing 
 .fc-daygrid-event {
   border-radius: 8px !important;
   padding: 6px 8px !important;
   font-weight: 600;
 }
 
-/* modal reuse (if you already have modal styles they'll apply) */
+/* modal reuse (if you already have modal styles they'll apply) 
 .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.45); }
 .modal-content { background: #fff; width: 420px; padding: 22px; margin: 8% auto; border-radius: 12px; position: relative; }
 .close-btn { position: absolute; right: 14px; top: 10px; font-size: 22px; cursor: pointer; color: #666; }
@@ -549,6 +548,7 @@ p {
   box-shadow: 0 0 5px rgba(247, 209, 234, 0.6);
 }
 
+/* huh 
 .preview-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -583,4 +583,5 @@ p {
   margin-bottom: 5px;
   font-size: 14px;
 }
+*/
 
