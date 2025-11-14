@@ -292,7 +292,7 @@ p {
 }
 
 /* ---------------- LOGIN PAGE FIX ---------------- */
-.login-container {
+.login-container, .create-container {
   background: #988495;
   padding: 40px;
   border-radius: 15px;
@@ -303,7 +303,7 @@ p {
   text-align: center;
 }
 
-.login-logo {
+.login-logo, .create-logo {
   max-width: 70%;
   height: auto;
   margin-bottom: 20px;
