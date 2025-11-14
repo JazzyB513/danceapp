@@ -92,3 +92,13 @@ document.addEventListener("DOMContentLoaded", () => {
     closeBtn.addEventListener("click", () => modal.style.display = "none");
     window.addEventListener("click", e => { if(e.target === modal) modal.style.display = "none"; });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const homeBtn = document.getElementById("homeBtn");
+
+    if (homeBtn) {
+        homeBtn.addEventListener("click", function () {
+            window.location.href = "home.html";
+        });
+    }
+});
