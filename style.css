@@ -486,3 +486,26 @@ p {
 .modal a#downloadBtn:hover {
   background-color: #f5d6f0;
 }
+
+/* ============================================================
+   FullCalendar & Schedule page tweaks
+============================================================ */
+
+/* ensure calendar container is visually consistent with your app */
+#calendar .fc {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* event popover & list spacing */
+.fc-daygrid-event {
+  border-radius: 8px !important;
+  padding: 6px 8px !important;
+  font-weight: 600;
+}
+
+/* modal reuse (if you already have modal styles they'll apply) */
+.modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.45); }
+.modal-content { background: #fff; width: 420px; padding: 22px; margin: 8% auto; border-radius: 12px; position: relative; }
+.close-btn { position: absolute; right: 14px; top: 10px; font-size: 22px; cursor: pointer; color: #666; }
+
