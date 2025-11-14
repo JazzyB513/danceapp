@@ -1,33 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Create Parent Account</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Account – Step 2</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="container">
-        <h2>Create Parent Account</h2>
 
-        <!-- Student Section -->
-        <div id="students-container">
-            <div class="student-entry">
-                <label>Student Name</label>
-                <input type="text" class="student-name" placeholder="Enter student's name" />
+<div class="create-container">
+  <img src="images/whlogo" class="create-logo" alt="Logo" />
 
-                <label>Relationship to Student</label>
-                <select class="relationship-select">
-                    <!-- JS will populate this -->
-                </select>
-            </div>
-        </div>
+  <form id="step2Form">
 
-        <button id="add-student-btn" type="button">Add Another Student</button>
+    <h2>Complete Your Account</h2>
 
-        <button id="create-account-btn" type="submit">Create Account</button>
+    <!-- Student Fields -->
+    <div id="studentFields" style="display:none;">
+      <div class="create-group">
+        <label for="birthday">Birthday</label>
+        <input type="date" id="birthday" name="birthday" required />
+      </div>
+
+      <div class="create-group">
+        <label for="years">Years at the Studio</label>
+        <input type="number" id="years" name="years" min="0" placeholder="e.g. 3" required />
+      </div>
     </div>
 
-    <script src="create-step2.js"></script>
+    <!-- Parent Fields -->
+    <div id="parentFields" style="display:none;">
+
+      <div class="create-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="create-group">
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" name="phone" required />
+      </div>
+
+      <div class="create-group">
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" required />
+      </div>
+
+      <div class="create-group">
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" required />
+      </div>
+
+      <div class="create-group">
+        <label for="state">State</label>
+        <input type="text" id="state" name="state" required />
+      </div>
+
+      <div class="create-group">
+        <label for="zipcode">Zipcode</label>
+        <input type="text" id="zipcode" name="zipcode" required />
+      </div>
+
+      <h3>Student(s)</h3>
+      <div id="studentsContainer"></div>
+
+      <button type="button" class="btn" id="addStudentBtn">Add Another Student</button>
+    </div>
+
+    <!-- Passwords (both parent & student see this) -->
+    <div class="create-group">
+      <label for="createpassword">Create Password</label>
+      <input type="password" id="createpassword" name="createpassword" required />
+    </div>
+
+    <div class="create-group">
+      <label for="confirmpassword">Confirm Password</label>
+      <input type="password" id="confirmpassword" name="confirmpassword" required />
+    </div>
+
+    <button type="submit" class="btn">Sign Up</button>
+
+  </form>
+</div>
+
+<script src="create-step2.js"></script>
 </body>
 </html>
