@@ -549,7 +549,7 @@ p {
 }
 
 /* Helper */
-.create-group helper {
+.create-group p {
    display: block;
    text-align: left;
    font-weight: 300;
