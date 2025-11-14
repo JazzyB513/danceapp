@@ -2,80 +2,82 @@ document.addEventListener("DOMContentLoaded", () => {
     loadVideos();
 });
 
+let allVideos = [];
+
 /* --------------------------------------------------------
-   1. Load videos.json
+   Load Videos from JSON
 --------------------------------------------------------- */
 async function loadVideos() {
     try {
         const response = await fetch("videos.json");
-        const videos = await response.json();
+        allVideos = await response.json();
 
-        renderFilters(videos);
-        renderVideos(videos);
-    } catch (error) {
-        console.error("Error loading videos.json:", error);
+        // Sort videos by newest first
+        allVideos.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+
+        buildSidebar(allVideos);
+        renderVideos(allVideos);
+    } catch (err) {
+        console.error("Error loading videos.json:", err);
     }
 }
 
 /* --------------------------------------------------------
-   2. Render filter buttons (generated from student names)
+   Build Dynamic Sidebar (Class list)
 --------------------------------------------------------- */
-function renderFilters(videos) {
-    const filterContainer = document.getElementById("video-filters");
-    filterContainer.innerHTML = ""; // clear existing
+function buildSidebar(videos) {
+    const classList = document.getElementById("class-list");
+    classList.innerHTML = "";
 
-    const students = ["All", ...new Set(videos.map(v => v.student))];
+    // "All" always first
+    const allItem = document.createElement("li");
+    allItem.textContent = "All Videos";
+    allItem.classList.add("filter-item");
+    allItem.addEventListener("click", () => {
+        document.getElementById("video-title").textContent = "All Videos";
+        renderVideos(allVideos);
+    });
+    classList.appendChild(allItem);
 
-    students.forEach(student => {
-        const button = document.createElement("button");
-        button.classList.add("filter-btn");
-        button.textContent = student;
+    // get unique class names
+    const classes = [...new Set(videos.map(v => v.class))];
 
-        button.addEventListener("click", () => {
-            filterByStudent(student, videos);
+    classes.forEach(cls => {
+        const item = document.createElement("li");
+        item.textContent = cls;
+        item.classList.add("filter-item");
+
+        item.addEventListener("click", () => {
+            document.getElementById("video-title").textContent = cls;
+            const filtered = allVideos.filter(v => v.class === cls);
+            renderVideos(filtered);
         });
 
-        filterContainer.appendChild(button);
+        classList.appendChild(item);
     });
 }
 
 /* --------------------------------------------------------
-   3. Display all videos
+   Display Videos in the Gallery
 --------------------------------------------------------- */
 function renderVideos(videos) {
     const gallery = document.getElementById("video-gallery");
-    gallery.innerHTML = ""; // clear any old videos
+    gallery.innerHTML = "";
 
     videos.forEach(video => {
-        const item = document.createElement("div");
-        item.classList.add("video-item");
-        item.dataset.student = video.student;
+        const div = document.createElement("div");
+        div.classList.add("video-card");
 
-        item.innerHTML = `
-            <div class="video-card">
-                <video src="${video.src}" controls></video>
-                <h3>${video.title}</h3>
-                <p><strong>Student:</strong> ${video.student}</p>
-                <p><strong>Level:</strong> ${video.level}</p>
-                <p><strong>Category:</strong> ${video.category}</p>
-            </div>
+        div.innerHTML = `
+            <video src="${video.src}" controls></video>
+            <h3>${video.title}</h3>
+            <p><strong>Class:</strong> ${video.class}</p>
+            <p><strong>Student:</strong> ${video.student}</p>
+            <p><strong>Date:</strong> ${video.timestamp}</p>
         `;
 
-        gallery.appendChild(item);
+        gallery.appendChild(div);
     });
-}
-
-/* --------------------------------------------------------
-   4. Filter videos by student
---------------------------------------------------------- */
-function filterByStudent(student, allVideos) {
-    if (student === "All") {
-        renderVideos(allVideos);
-        return;
-    }
-
-    const filtered = allVideos.filter(v => v.student === student);
-    renderVideos(filtered);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
