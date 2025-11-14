@@ -53,6 +53,18 @@ p {
   background-color: #f5d6f0;
 }
 
+.link {
+  display: block;
+  margin-top: 15px;
+  color: #f7d1ea;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
 /* Content Wrapper (Center Content) */
 .content {
   flex: 1;
@@ -126,7 +138,7 @@ p {
   box-shadow: 0 0 5px rgba(247, 209, 234, 0.6);
 }
 
-/* Login Button */
+/* Login Button 
 .login-btn {
   width: 100%;
   padding: 12px;
@@ -144,20 +156,7 @@ p {
 .login-btn:hover {
   background-color: #f5d6f0;
 }
-
-/* Forgot Password */
-.link {
-  display: block;
-  margin-top: 15px;
-  color: #f7d1ea;
-  text-decoration: none;
-  font-size: 15px;
-}
-
-.link:hover {
-  text-decoration: underline;
-}
-
+*/
 
 /* ============================================================
    VIDEO PAGE LAYOUT
