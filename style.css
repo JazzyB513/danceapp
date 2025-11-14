@@ -138,26 +138,6 @@ p {
   box-shadow: 0 0 5px rgba(247, 209, 234, 0.6);
 }
 
-/* Login Button 
-.login-btn {
-  width: 100%;
-  padding: 12px;
-  margin-top: 10px;
-  background-color: #eeb6e5;
-  color: white;
-  border-radius: 8px;
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  font-weight: 600;
-}
-
-.login-btn:hover {
-  background-color: #f5d6f0;
-}
-*/
-
 /* ============================================================
    VIDEO PAGE LAYOUT
 ============================================================ */
@@ -550,11 +530,11 @@ p {
 
 /* Helper */
 .create-group p {
-   display: block;
-   text-align: left;
-   font-weight: 300;
-   margin-bottom: 5px;
-   color: #f7d1ea;
+  display: block;
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #f7d1ea;
 }
 
 /* Input fields */
