@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const loginBtn = document.getElementById("loginBtn");
+    const videoBtn = document.getElementById("videoBtn");
 
-    if (loginBtn) {
-        loginBtn.addEventListener("click", function () {
-            window.location.href = "home.html";
+    if (videoBtn) {
+        videoBtn.addEventListener("click", function () {
+            window.location.href = "video.html";
         });
     }
 });
