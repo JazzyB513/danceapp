@@ -19,6 +19,15 @@
       "students": ["Jazzy"],
       "description": "Routine run-through for the showcase.",
       "location": "Studio B"
+    },
+    {
+      "id": "e3",
+      "title": "Spring Showcase",
+      "start": "2025-03-05T19:00:00",
+      "type": "performance",
+      "students": ["Edin","Jazzy"],
+      "description": "Main recital performance. Arrive 1 hour early.",
+      "location": "Town Hall"
     }
   ]
 }
