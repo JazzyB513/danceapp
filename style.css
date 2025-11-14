@@ -117,7 +117,7 @@ p {
 
 /* Label */
 .input-group label {
-  padding: 10%;
+  padding-left: 10%;
   display: block;
   text-align: left;
   font-weight: 600;
