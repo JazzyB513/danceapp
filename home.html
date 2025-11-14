@@ -2,27 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Dashboard</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="images/brlogo">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
-  
 <body>
-  <!-- Main Content -->
-  <div class="content">
- 
-    <a href="#" id="videoBtn" class="btn">Practice Videos</a>
-    <br>
-    <a href="#" id="payBtn" class="btn">Payment</a>
-    <br>
-    <a href="#" id="scheduleBtn" class="btn">Schedule</a>
-    <br>
-    <a href="#" id="memoryBtn" class="btn">Memories</a>
 
+  <div class="page-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Dance App</h2>
+      <ul>
+        <li class="sidebar-item active" data-page="home">Home</li>
+        <li class="sidebar-item" data-page="account">Account</li>
+        <li class="sidebar-item" data-page="payment">Payment Info</li>
+        <li class="sidebar-item" data-page="schedule">Schedule</li>
+        <li class="sidebar-item" data-page="videos">Practice Videos</li>
+        <li class="sidebar-item" data-page="memories">Memories</li>
+        <li class="sidebar-item" data-page="notifications">Notifications</li>
+        <li class="sidebar-item" data-page="messages">Messages</li>
+      </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <div id="page-content">
+        <!-- Home Dashboard Preview Cards -->
+        <h1>Welcome!</h1>
+        <div class="preview-grid">
+          <div class="preview-card" data-page="notifications">
+            <h3>Latest Notifications</h3>
+            <ul id="preview-notifications">
+              <li>No notifications yet</li>
+            </ul>
+          </div>
+          <div class="preview-card" data-page="videos">
+            <h3>Latest Practice Video</h3>
+            <ul id="preview-videos">
+              <li>No videos yet</li>
+            </ul>
+          </div>
+          <div class="preview-card" data-page="schedule">
+            <h3>Next Upcoming Event</h3>
+            <ul id="preview-events">
+              <li>No upcoming events</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
   </div>
-<script src="home.js"></script>
+
+  <script src="home.js"></script>
 </body>
 </html>
-
