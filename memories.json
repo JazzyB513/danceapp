@@ -3,16 +3,33 @@
     {
       "id": "m1",
       "title": "Spring Showcase 2025",
-      "url": "media/spring_showcase1.jpg",
-      "description": "Group photo from the performance.",
-      "date": "2025-03-05"
+      "media": [
+        {
+          "type": "image",
+          "url": "media/spring_showcase1.jpg",
+          "description": "Group photo from the performance."
+        },
+        {
+          "type": "video",
+          "url": "media/spring_showcase_highlight.mp4",
+          "description": "Performance highlights."
+        }
+      ],
+      "date": "2025-03-05",
+      "students": ["Edin","Jazzy"]
     },
     {
       "id": "m2",
-      "title": "Ballet Practice Highlights",
-      "url": "media/ballet_highlight.mp4",
-      "description": "Short clips from weekly class.",
-      "date": "2025-02-14"
+      "title": "Ballet Class Highlights",
+      "media": [
+        {
+          "type": "video",
+          "url": "media/ballet_highlight.mp4",
+          "description": "Short clips from weekly class."
+        }
+      ],
+      "date": "2025-02-14",
+      "students": ["Edin","Jazzy"]
     }
   ]
 }
