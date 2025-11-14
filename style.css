@@ -1,44 +1,53 @@
-/* ---------------- Global / Layout ---------------- */
+/* ============================================================
+   GLOBAL STYLES
+============================================================ */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #4a4a4a;
+  text-align: center;
   margin: 0;
   padding: 0;
   background: linear-gradient(135deg, #fde7f3 0%, #fbdcf0 40%, #f7d1ea 100%);
+  background-attachment: fixed;
+  background-size: cover;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-.page-container {
-  display: flex;
-  height: 100vh;
+h1, h2, h3 {
+  font-family: 'Pacifico', cursive;
+  color: #6b5faa;
+  margin: 0 0 15px 0;
 }
 
-/* Generic Button Style */
-.btn {
+p {
+  font-family: 'Pacifico', normal;
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+
+.btn, .button {
   display: inline-block;
-  margin: 10px 0;
+  margin: 10px;
   padding: 15px 25px;
   background-color: #eeb6e5;
   color: white;
   text-decoration: none;
-  border: none;
   border-radius: 8px;
   font-size: 20px;
   font-weight: 600;
-  cursor: pointer;
   transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
-.btn:hover {
+.btn:hover, .button:hover {
   background-color: #f5d6f0;
 }
 
-/* Generic Link Style */
 .link {
   display: block;
-  margin-top: 10px;
+  margin-top: 15px;
   color: #f7d1ea;
   text-decoration: none;
   font-size: 15px;
@@ -48,19 +57,27 @@ body {
   text-decoration: underline;
 }
 
-/* Login Container */
-.login-container {
-  background: #988495; /* darker grey */
+/* Optional: align links nicely */
+.login-links {
+  margin-top: 15px;
+}
+
+/* ============================================================
+   LOGIN / CREATE ACCOUNT CONTAINER
+============================================================ */
+.login-container,
+.create-container {
+  background: #988495;
   padding: 40px;
   border-radius: 15px;
-  width: 350px;
-  max-width: 90%;
+  width: 50%;
   margin: 80px auto;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   text-align: center;
 }
 
-.login-logo {
+.login-logo,
+.create-logo {
   max-width: 100%;
   height: auto;
   display: block;
@@ -68,35 +85,65 @@ body {
   border-radius: 10px;
 }
 
-.input-group {
-  margin-bottom: 15px;
+/* Input groups */
+.input-group,
+.create-group {
+  margin-bottom: 20px;
   text-align: left;
 }
 
-.input-group label {
-  font-weight: 600;
-  color: #f7d1ea;
+.input-group label,
+.create-group label {
   display: block;
+  font-weight: 600;
   margin-bottom: 5px;
+  color: #f7d1ea;
 }
 
-.input-group input {
-  width: 100%;
+.input-group input,
+.create-group input,
+.create-group select {
+  width: 80%;
   padding: 12px;
   border: 2px solid #ddd;
   border-radius: 8px;
   font-size: 16px;
+  background: #ffffff;
+  color: #6a6a6a;
 }
 
-.input-group input:focus {
+.input-group input:focus,
+.create-group input:focus,
+.create-group select:focus {
   outline: none;
   border-color: #f7d1ea;
   box-shadow: 0 0 5px rgba(247, 209, 234, 0.6);
 }
 
-/* Optional: align links nicely */
-.login-links {
-  margin-top: 15px;
+/* ============================================================
+   RADIO BUTTONS
+============================================================ */
+.create-group input[type="radio"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+/* ============================================================
+   HIDE/SHOW FIELDS
+============================================================ */
+#studentFields,
+#parentFields {
+  margin-top: 20px;
+}
+
+/* ============================================================
+   FORM BUTTONS
+============================================================ */
+#createBtn,
+#loginBtn,
+button {
+  width: 50%;
+  margin-top: 10px;
 }
 
 /* Sidebar */
