@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Account – Step 2</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="images/brlogo">
+</head>
+<body>
+
+<div class="create-container">
+  <img src="images/whlogo" class="create-logo" alt="Logo">
+
+  <form id="step2Form">
+    <div id="studentFields" style="display: none;">
+      <div class="create-group">
+        <label for="birthday">Birthday</label>
+        <input type="date" id="birthday" name="birthday">
+      </div>
+
+      <div class="create-group">
+        <label for="yearsAtStudio">Years at Studio</label>
+        <input type="number" id="yearsAtStudio" name="yearsAtStudio" min="0">
+      </div>
+    </div>
+
+    <div id="parentFields" style="display: none;">
+      <div class="create-group">
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" placeholder="1234 Dance Lane">
+      </div>
+
+      <div class="create-group">
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" placeholder="City">
+      </div>
+
+      <div class="create-group">
+        <label for="state">State</label>
+        <input type="text" id="state" name="state" placeholder="State">
+      </div>
+
+      <div class="create-group">
+        <label for="zipcode">Zipcode</label>
+        <input type="text" id="zipcode" name="zipcode" placeholder="Zipcode">
+      </div>
+    </div>
+
+    <div class="create-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="dance.is.awesome@gmail.com" required>
+    </div>
+
+    <div class="create-group">
+      <label for="phone">Phone Number</label>
+      <input type="text" id="phone" name="phone" placeholder="(555) 123-4567" required>
+    </div>
+
+    <div class="create-group">
+      <label for="createpassword">Password</label>
+      <input type="password" id="createpassword" name="createpassword" placeholder="Create a password" required>
+    </div>
+
+    <div class="create-group">
+      <label for="confirmpassword">Confirm Password</label>
+      <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Re-enter password" required>
+    </div>
+
+    <button type="submit" class="btn">Sign Up</button>
+  </form>
+</div>
+
+<script>
+  const role = localStorage.getItem('signupRole');
+  const studentFields = document.getElementById('studentFields');
+  const parentFields = document.getElementById('parentFields');
+
+  // Show fields based on role
+  if (role === 'student') studentFields.style.display = 'block';
+  if (role === 'parent') parentFields.style.display = 'block';
+
+  // Prefill first and last name if needed
+  const firstName = localStorage.getItem('signupFirstName');
+  const lastName = localStorage.getItem('signupLastName');
+
+  const step2Form = document.getElementById('step2Form');
+  step2Form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Collect all data
+    const formData = {
+      firstName,
+      lastName,
+      role,
+      email: document.getElementById('email').value,
+      phone: document.getElementById('phone').value,
+      password: document.getElementById('createpassword').value,
+      confirmPassword: document.getElementById('confirmpassword').value,
+      birthday: role === 'student' ? document.getElementById('birthday').value : null,
+      yearsAtStudio: role === 'student' ? document.getElementById('yearsAtStudio').value : null,
+      address: role === 'parent' ? document.getElementById('address').value : null,
+      city: role === 'parent' ? document.getElementById('city').value : null,
+      state: role === 'parent' ? document.getElementById('state').value : null,
+      zipcode: role === 'parent' ? document.getElementById('zipcode').value : null
+    };
+
+    console.log('Signup Data:', formData);
+    alert('Sign up successful! (Check console for data)');
+    localStorage.clear(); // cleanup
+    window.location.href = "index.html"; // redirect to login/home
+  });
+</script>
+
+</body>
+</html>
