@@ -22,45 +22,62 @@
 
     <div class="create-group">
       <label for="lastname">Last Name</label>
-      <input type="lastname" id="lastname" name="lastname" placeholder="Enter your last name" required>
+      <input type="text" id="lastname" name="lastname" placeholder="Enter your last name" required>
       <p class="helper">i.e. Doe</p>
     </div>
 
     <div class="create-group">
+      <label for="role">Select One</label>
+      <select id="role" name="role" required>
+        <option value="" disabled selected>Select one...</option>
+        <option value="parent">Parent or Gaurdian</option>
+        <option value="student">Student</option>
+      </select>
+    </div>
+
+    <div class="create-group">
       <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      <input type="text" id="email" name="email" placeholder="Enter your email" required>
       <p class="helper">i.e. dance.is.awesome@gmail.com</p>
     </div>
 
     <div class="create-group">
-      <label for="phone">Email</label>
-      <input type="phone" id="phone" name="phone" placeholder="Enter your phone number" required>
+      <label for="phone">Phone Number</label>
+      <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
       <p class="helper">i.e. (555) 123-4567</p>
     </div>
 
     <div class="create-group">
       <label for="address">Address</label>
-      <input type="address" id="address" name="address" placeholder="Enter your address" required>
+      <input type="text" id="address" name="address" placeholder="Enter your address" required>
        <p class="helper">i.e. 1234 Dance Lane</p>
     </div>
 
     <div class="create-group">
       <label for="city">City</label>
-      <input type="city" id="city" name="city" placeholder="City" required>
-       <p class="helper">i.e. Billings</p>
+      <input type="text" id="city" name="city" placeholder="City" required>
     </div>
 
     <div class="create-group">
       <label for="state">State</label>
-      <input type="state" id="state" name="state" placeholder="State" required>
-       <p class="helper">MT</p>
+      <input type="text" id="state" name="state" placeholder="State" required>
     </div>
 
     <div class="create-group">
       <label for="zipcode">Zipcode</label>
-      <input type="zipcode" id="zipcode" name="zipcode" placeholder="Enter your zipcode" required>
-       <p class="helper">i.e. 59105</p>
+      <input type="text" id="zipcode" name="zipcode" placeholder="Enter your zipcode" required>
     </div>
+
+     <div class="create-group">
+      <label for="createpassword">Password</label>
+      <input type="password" id="createpassword" name="createpassword" placeholder="Create a password" required>
+    </div>
+
+    <div class="create-group">
+      <label for="confirmpassword">Confirm Password</label>
+      <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Re-enter password" required>
+    </div>
+
 
     <a href="#" id="createBtn" class="btn">Sign Up</a>
   </form>
