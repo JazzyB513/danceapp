@@ -1,25 +1,26 @@
-/* ==========================
-   General Styles for All Pages
-   ========================== */
+/* ============================================================
+   GLOBAL STYLES — SHARED ACROSS ALL PAGES
+============================================================ */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #988495;
+  color: #4a4a4a;
   text-align: center;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 
+  /* Pastel gradient background */
   background: linear-gradient(
     135deg,
     #fde7f3 0%,
     #fbdcf0 40%,
     #f7d1ea 100%
   );
-
   background-attachment: fixed;
   background-size: cover;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
@@ -35,7 +36,7 @@ p {
 }
 
 /* Generic Button Style */
-.btn {
+.btn, .button {
   display: inline-block;
   margin: 10px;
   padding: 15px 25px;
@@ -48,15 +49,28 @@ p {
   font-weight: 600;
 }
 
-.btn:hover {
+.btn:hover, .button:hover {
   background-color: #f5d6f0;
 }
 
-/* ==========================
-   Login Page Styles
-   ========================== */
+/* Content Wrapper (Center Content) */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 40px 20px;
+  transition: margin-left 0.3s ease;
+  text-align: center;
+}
 
-/* Login Container */
+
+/* ============================================================
+   LOGIN PAGE
+============================================================ */
+
 .login-container {
   background: #988495; /* darker grey */
   padding: 40px;
@@ -67,16 +81,8 @@ p {
   text-align: center;
 }
 
-/* Login Title */
-.login-container h2 {
-  font-family: 'Pacifico', cursive;
-  color: #f7d1ea; /* light pink */
-  margin-bottom: 20px;
-}
-
-/* Logo Image */
+/* Logo image */
 .login-logo {
-  width: full;
   max-width: 100%;
   height: auto;
   display: block;
@@ -84,33 +90,39 @@ p {
   border-radius: 10px;
 }
 
-/* Input Label */
+/* Login Title */
+.login-container h2 {
+  font-family: 'Pacifico', cursive;
+  color: #f7d1ea;
+  margin-bottom: 20px;
+}
+
+/* Label */
 .input-group label {
   display: block;
   text-align: left;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #f7d1ea; /* light pink */
+  color: #f7d1ea;
 }
 
-/* Input Boxes */
+/* Input fields */
 .input-group input {
-   width: 100%;
-   padding: 12px;
-   border: 2px solid #ddd;
-   border-radius: 8px;
-   margin-bottom: 15px;
-   font-size: 16px;
-   background: #ffffff; /* white fields */
-   color: #6a6a6a; /* grey text */
-   flex: center;
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  background: #ffffff;
+  color: #6a6a6a;
 }
 
-/* Input Focus */
+/* Focus outline */
 .input-group input:focus {
   outline: none;
   border-color: #f7d1ea;
-  box-shadow: 0 0 5px rgba(247,209,234,0.6);
+  box-shadow: 0 0 5px rgba(247, 209, 234, 0.6);
 }
 
 /* Login Button */
@@ -132,7 +144,7 @@ p {
   background-color: #f5d6f0;
 }
 
-/* Forgot Password Link */
+/* Forgot Password */
 .forgot-link {
   display: block;
   margin-top: 15px;
@@ -145,48 +157,17 @@ p {
   text-decoration: underline;
 }
 
-/* ==========================
-   Content Wrapper
-   ========================== */
-.content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  padding: 40px 20px;
-  transition: margin-left 0.3s ease;
-  text-align: center;
-}
 
-/* ==========================
-   Background
-========================== */
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-
-  background: linear-gradient(135deg, #c2e9e4, #d8d2ff);
-  background-attachment: fixed;
-  color: #4a4a4a;
-}
-
-/* ==========================
-   Page Layout
-========================== */
+/* ============================================================
+   VIDEO PAGE LAYOUT
+============================================================ */
 
 .page-container {
   display: flex;
   height: 100vh;
 }
 
-/* ==========================
-   Sidebar
-========================== */
-
+/* ---------------- Sidebar ---------------- */
 .sidebar {
   width: 260px;
   background: #ffffffdd;
@@ -227,10 +208,7 @@ body {
   border-color: #8b80d0;
 }
 
-/* ==========================
-   Main Content
-========================== */
-
+/* ---------------- Main Content ---------------- */
 .main-content {
   flex: 1;
   padding: 35px;
@@ -243,10 +221,7 @@ body {
   color: #6b5faa;
 }
 
-/* ==========================
-   Video Grid
-========================== */
-
+/* ---------------- Video Grid ---------------- */
 .video-grid {
   margin-top: 25px;
   display: grid;
@@ -287,4 +262,3 @@ body {
   font-size: 14px;
   color: #666;
 }
-
