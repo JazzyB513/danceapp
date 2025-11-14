@@ -76,7 +76,7 @@ p {
 
 /* Logo Image */
 .login-logo {
-  width: 180px;
+  width: full;
   max-width: 100%;
   height: auto;
   display: block;
