@@ -75,7 +75,7 @@ p {
   background: #988495; /* darker grey */
   padding: 40px;
   border-radius: 15px;
-  width: 350px;
+  width: auto;
   margin: 80px auto;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   text-align: center;
