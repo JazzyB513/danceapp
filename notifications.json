@@ -1,0 +1,16 @@
+{
+  "notifications": [
+    {
+      "id": "n1",
+      "title": "New Video Uploaded",
+      "message": "Ballet Technique 2 has been uploaded for Edin and Jazzy.",
+      "date": "2025-02-15"
+    },
+    {
+      "id": "n2",
+      "title": "Upcoming Event",
+      "message": "Spring Showcase is on March 5th. Please arrive 1 hour early.",
+      "date": "2025-02-16"
+    }
+  ]
+}
