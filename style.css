@@ -432,3 +432,57 @@ p {
   cursor: pointer;
 }
 
+/* ============================================================
+   MEMORIES PAGE
+============================================================ */
+
+#mediaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.video-card img,
+.video-card video {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.video-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.video-card:hover {
+  transform: scale(1.03);
+  background: #fff6ff;
+}
+
+/* Modal */
+.modal-content #modalMedia img,
+.modal-content #modalMedia video {
+  margin-top: 15px;
+  border-radius: 12px;
+}
+
+.modal a#downloadBtn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #eeb6e5;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.modal a#downloadBtn:hover {
+  background-color: #f5d6f0;
+}
