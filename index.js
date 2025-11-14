@@ -7,3 +7,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const createBtn = document.getElementById("loginBtn");
+
+    if (createBtn) {
+        createBtn.addEventListener("click", function () {
+            window.location.href = "create.html";        });
+    }
+});
