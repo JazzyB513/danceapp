@@ -75,7 +75,7 @@ p {
   background: #988495; /* darker grey */
   padding: 40px;
   border-radius: 15px;
-  width: auto;
+  width: 50%;
   margin: 80px auto;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   text-align: center;
@@ -108,7 +108,7 @@ p {
 
 /* Input fields */
 .input-group input {
-  width: 100%;
+  width: auto;
   padding: 12px;
   border: 2px solid #ddd;
   border-radius: 8px;
@@ -116,6 +116,7 @@ p {
   font-size: 16px;
   background: #ffffff;
   color: #6a6a6a;
+  flex: center
 }
 
 /* Focus outline */
