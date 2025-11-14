@@ -1,35 +1,82 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const studentTabs = document.querySelectorAll(".student-tab");
-  const videoContainer = document.getElementById("videoContainer");
-
-  fetch("video.json")
-    .then(res => res.json())
-    .then(data => {
-      window.videoData = data.students; // store globally
-    })
-    .catch(err => console.error(err));
-
-  // Handle tab switching
-  studentTabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-      const student = tab.dataset.student;
-      loadVideos(student);
-    });
-  });
-
-  function loadVideos(student) {
-    const videos = window.videoData[student] || [];
-
-    videoContainer.innerHTML = videos.map(v => `
-      <div class="video-card">
-        <h3>${v.title}</h3>
-        <video controls src="${v.url}"></video>
-        <p>${v.description}</p>
-        <p class="class-label">${v.class}</p>
-      </div>
-    `).join("");
-  }
+    loadVideos();
 });
+
+/* --------------------------------------------------------
+   1. Load videos.json
+--------------------------------------------------------- */
+async function loadVideos() {
+    try {
+        const response = await fetch("videos.json");
+        const videos = await response.json();
+
+        renderFilters(videos);
+        renderVideos(videos);
+    } catch (error) {
+        console.error("Error loading videos.json:", error);
+    }
+}
+
+/* --------------------------------------------------------
+   2. Render filter buttons (generated from student names)
+--------------------------------------------------------- */
+function renderFilters(videos) {
+    const filterContainer = document.getElementById("video-filters");
+    filterContainer.innerHTML = ""; // clear existing
+
+    const students = ["All", ...new Set(videos.map(v => v.student))];
+
+    students.forEach(student => {
+        const button = document.createElement("button");
+        button.classList.add("filter-btn");
+        button.textContent = student;
+
+        button.addEventListener("click", () => {
+            filterByStudent(student, videos);
+        });
+
+        filterContainer.appendChild(button);
+    });
+}
+
+/* --------------------------------------------------------
+   3. Display all videos
+--------------------------------------------------------- */
+function renderVideos(videos) {
+    const gallery = document.getElementById("video-gallery");
+    gallery.innerHTML = ""; // clear any old videos
+
+    videos.forEach(video => {
+        const item = document.createElement("div");
+        item.classList.add("video-item");
+        item.dataset.student = video.student;
+
+        item.innerHTML = `
+            <div class="video-card">
+                <video src="${video.src}" controls></video>
+                <h3>${video.title}</h3>
+                <p><strong>Student:</strong> ${video.student}</p>
+                <p><strong>Level:</strong> ${video.level}</p>
+                <p><strong>Category:</strong> ${video.category}</p>
+            </div>
+        `;
+
+        gallery.appendChild(item);
+    });
+}
+
+/* --------------------------------------------------------
+   4. Filter videos by student
+--------------------------------------------------------- */
+function filterByStudent(student, allVideos) {
+    if (student === "All") {
+        renderVideos(allVideos);
+        return;
+    }
+
+    const filtered = allVideos.filter(v => v.student === student);
+    renderVideos(filtered);
+}
 
 document.addEventListener("DOMContentLoaded", function () {
     const homeBtn = document.getElementById("homeBtn");
