@@ -312,6 +312,7 @@ p {
   outline: none;
   border-color: #f7d1ea;
   box-shadow: 0 0 5px rgba(247, 209, 234, 0.6);
+  text-align: left;
 }
 
 /* ---------------- LOGIN PAGE FIX ---------------- */
