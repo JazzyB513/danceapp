@@ -1,29 +1,34 @@
-{
-  "students": {
-    "Edin": [
-      {
-        "id": "v1",
-        "title": "Ballet Combo – Week 2",
-        "description": "Practice the adagio and across-the-floor combo.",
-        "url": "videos/ballet-week2.mp4",
-        "class": "Ballet"
-      },
-      {
-        "id": "v2",
-        "title": "Lyrical Warmup",
-        "description": "Warmup for competition season.",
-        "url": "videos/lyrical-warmup.mp4",
-        "class": "Lyrical"
-      }
-    ],
-    "Jazzy": [
-      {
-        "id": "v3",
-        "title": "Hip Hop – Isolation Drills",
-        "description": "Practice locking and popping drills.",
-        "url": "videos/isolation-drills.mp4",
-        "class": "Hip Hop"
-      }
-    ]
+[
+  {
+    "id": 1,
+    "src": "videos/ella_warmup.mp4",
+    "student": "Ella",
+    "title": "Warm-Up Routine",
+    "level": "Beginner",
+    "category": "Warmup"
+  },
+  {
+    "id": 2,
+    "src": "videos/ella_combo1.mp4",
+    "student": "Ella",
+    "title": "Combo #1",
+    "level": "Intermediate",
+    "category": "Choreography"
+  },
+  {
+    "id": 3,
+    "src": "videos/mason_drills.mp4",
+    "student": "Mason",
+    "title": "Footwork Drills",
+    "level": "Beginner",
+    "category": "Technique"
+  },
+  {
+    "id": 4,
+    "src": "videos/mason_freestyle.mp4",
+    "student": "Mason",
+    "title": "Freestyle Practice",
+    "level": "Advanced",
+    "category": "Freestyle"
   }
-}
+]
