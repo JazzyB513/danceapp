@@ -55,6 +55,12 @@ p {
   text-decoration: underline;
 }
 
+.radio {
+   background-color: #ffffff;
+   radius: 50%
+   text-align: left;
+}
+
 /* ============================================================
    PAGE CONTAINER (SIDEBAR + MAIN CONTENT)
 ============================================================ */
