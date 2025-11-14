@@ -1,0 +1,26 @@
+{
+  "students": [
+    {
+      "name": "Edin",
+      "totalDue": 120,
+      "charges": [
+        { "desc": "Ballet Class - Feb", "amount": 60 },
+        { "desc": "Hip Hop Class - Feb", "amount": 60 }
+      ],
+      "discounts": [
+        { "desc": "Sibling Discount", "amount": -10 }
+      ],
+      "nextAutoPay": "2025-11-15"
+    },
+    {
+      "name": "Jazzy",
+      "totalDue": 110,
+      "charges": [
+        { "desc": "Ballet Class - Feb", "amount": 50 },
+        { "desc": "Hip Hop Class - Feb", "amount": 60 }
+      ],
+      "discounts": [],
+      "nextAutoPay": "2025-11-15"
+    }
+  ]
+}
