@@ -1,84 +1,33 @@
 /* ==========================
-   General Styles for All Pages
-   ========================== */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #988495;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-
-    background: linear-gradient(
-        135deg,
-        #fde7f3 0%,
-        #fbdcf0 40%,
-        #f7d1ea 100%
-    );
-
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-h1 {
-  font-family: 'Pacifico', cursive;
-  font-size: 150px;
-  margin-bottom: 20px;
-}
-
-p {
-  font-family: 'Pacifico', normal;
-  font-size: 70px;
-  margin-bottom: 20px;
-}
-
-.button {
-  display: inline-block;
-  margin: 10px;
-  padding: 15px 25px;
-  background-color: #eeb6e5;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-size: 20px;
-  transition: background-color 0.3s ease;
-  font-weight: 600;
-}
-
-.button:hover {
-  background-color: #f5d6f0;
-}
-
-/* ==========================
    Login Page
    ========================== */
 
 /* Login box container */
 .login-container {
-  background: rgba(255, 255, 255, 0.5);   /* soft white transparency */
+  background: #6a6a6a;              /* darker grey */
   padding: 40px;
   border-radius: 15px;
   width: 350px;
   margin: 80px auto;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   text-align: center;
 }
 
 /* Title */
 .login-container h2 {
   font-family: 'Pacifico', cursive;
-  color: #988495;
+  color: #f7d1ea;                   /* light pink text */
   margin-bottom: 20px;
 }
 
+/* Logo */
 .login-logo {
-  width: full;        /* make it smaller */
-  max-width: 100%;     /* make sure it never overflows the container */
-  height: auto;        /* keep proportions */
-  display: block;      
-  margin: 0 auto 20px; /* center it + add space below */
+  width: 180px;                     /* contained size */
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 10px;
 }
 
 /* Input Labels */
@@ -87,72 +36,11 @@ p {
   text-align: left;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #4d179a;
+  color: #f7d1ea;                   /* light pink */
 }
 
 /* Input Boxes */
 .input-group input {
   width: 100%;
   padding: 12px;
-  border: 2px solid #e5c7f0;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  font-size: 16px;
-  background: #fff;
-  color: #4d179a;
-}
-
-/* Input focus highlight */
-.input-group input:focus {
-  outline: none;
-  border-color: #c69ae6;
-  box-shadow: 0 0 5px rgba(198, 154, 230, 0.5);
-}
-
-/* Login Button (matches your other .button style) */
-.login-btn {
-  width: 100%;
-  padding: 12px;
-  margin-top: 10px;
-  background-color: #2f0d68;
-  color: white;
-  border-radius: 8px;
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.login-btn:hover {
-  background-color: #4d179a;
-}
-
-/* Forgot Password link */
-.forgot-link {
-  display: block;
-  margin-top: 15px;
-  color: #4d179a;
-  text-decoration: none;
-  font-size: 15px;
-}
-
-.forgot-link:hover {
-  text-decoration: underline;
-}
-
-/* ==========================
-   Content Area
-   ========================== */
-.content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;        /* centers horizontally */
-  padding: 40px 20px;
-  transition: margin-left 0.3s ease;
-  text-align: center;
-}
-
-}
+  border: 2px solid #ddd;           /* s*
