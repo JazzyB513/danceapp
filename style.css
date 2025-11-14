@@ -146,7 +146,7 @@ p {
 }
 
 /* Forgot Password */
-.forgot-link {
+.link {
   display: block;
   margin-top: 15px;
   color: #f7d1ea;
@@ -154,7 +154,7 @@ p {
   font-size: 15px;
 }
 
-.forgot-link:hover {
+.link:hover {
   text-decoration: underline;
 }
 
@@ -509,4 +509,72 @@ p {
 .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.45); }
 .modal-content { background: #fff; width: 420px; padding: 22px; margin: 8% auto; border-radius: 12px; position: relative; }
 .close-btn { position: absolute; right: 14px; top: 10px; font-size: 22px; cursor: pointer; color: #666; }
+
+/* ============================================================
+   CREATE PAGE
+============================================================ */
+
+.create-container {
+  background: #988495; /* darker grey */
+  padding: 40px;
+  border-radius: 15px;
+  width: 50%;
+  margin: 80px auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* Logo image */
+.create-logo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 10px;
+}
+
+/* Login Title */
+.create-container h2 {
+  font-family: 'Pacifico', cursive;
+  color: #f7d1ea;
+  margin-bottom: 20px;
+}
+
+/* Label */
+.create-group label {
+  display: block;
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #f7d1ea;
+}
+
+/* Helper */
+.create-group helper {
+   display: block;
+   text-align: left;
+   font-weight: 300;
+   margin-bottom: 5px;
+   color: #f7d1ea;
+}
+
+/* Input fields */
+.create-group input {
+  width: 80%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  background: #ffffff;
+  color: #6a6a6a;
+  flex: center;
+}
+
+/* Focus outline */
+.create-group input:focus {
+  outline: none;
+  border-color: #f7d1ea;
+  box-shadow: 0 0 5px rgba(247, 209, 234, 0.6);
+}
 
