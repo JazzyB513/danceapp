@@ -1,0 +1,52 @@
+{
+  "events": [
+    {
+      "id": "e1",
+      "title": "Ballet Practice",
+      "start": "2025-02-14T17:00:00",
+      "end": "2025-02-14T18:00:00",
+      "type": "practice",
+      "students": ["Edin","Jazzy"],
+      "description": "Weekly ballet technique class.",
+      "location": "Studio A"
+    },
+    {
+      "id": "e2",
+      "title": "Hip Hop Rehearsal",
+      "start": "2025-02-16T18:00:00",
+      "end": "2025-02-16T19:30:00",
+      "type": "rehearsal",
+      "students": ["Jazzy"],
+      "description": "Routine run-through for the showcase.",
+      "location": "Studio B"
+    },
+    {
+      "id": "e3",
+      "title": "Company Rehearsal (Full)",
+      "start": "2025-02-20T10:00:00",
+      "end": "2025-02-20T13:00:00",
+      "type": "rehearsal",
+      "students": ["Edin","Jazzy"],
+      "description": "Full company positions & staging.",
+      "location": "Main Stage"
+    },
+    {
+      "id": "e4",
+      "title": "Spring Showcase",
+      "start": "2025-03-05T19:00:00",
+      "type": "performance",
+      "students": ["Edin"],
+      "description": "Main recital performance. Arrive 1 hour early.",
+      "location": "Town Hall"
+    },
+    {
+      "id": "e5",
+      "title": "Studio Closed - Holiday",
+      "start": "2025-12-25",
+      "type": "dayoff",
+      "students": ["Edin","Jazzy"],
+      "description": "Happy holidays! Studio closed.",
+      "location": ""
+    }
+  ]
+}
