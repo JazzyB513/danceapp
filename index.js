@@ -9,10 +9,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    const createBtn = document.getElementById("createBtn");
+    const createLink = document.getElementById("createLink");
 
-    if (createBtn) {
-        createBtn.addEventListener("click", function () {
+    if (createLink) {
+        createLink.addEventListener("click", function () {
             window.location.href = "create.html";        });
     }
 });
