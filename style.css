@@ -3,7 +3,7 @@
    ========================== */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #dcd5fe;
+  color: #988495;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -69,12 +69,12 @@ p {
 /* Title */
 .login-container h2 {
   font-family: 'Pacifico', cursive;
-  color: #4d179a;
+  color: #988495;
   margin-bottom: 20px;
 }
 
 .login-logo {
-  width: 120px;        /* make it smaller */
+  width: full;        /* make it smaller */
   max-width: 100%;     /* make sure it never overflows the container */
   height: auto;        /* keep proportions */
   display: block;      
