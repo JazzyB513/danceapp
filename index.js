@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    const createBtn = document.getElementById("loginBtn");
+    const createBtn = document.getElementById("createBtn");
 
     if (createBtn) {
         createBtn.addEventListener("click", function () {
