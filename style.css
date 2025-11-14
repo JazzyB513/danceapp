@@ -35,12 +35,6 @@ p {
   margin-bottom: 20px;
 }
 
-.helper {
-  font-family: 'Pacifico', normal;
-  font-size: 15px;
-  margin-bottom: 20px;
-}
-
 /* Generic Button Style */
 .btn, .button {
   display: inline-block;
