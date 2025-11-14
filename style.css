@@ -77,6 +77,7 @@ p {
   transform: translateY(-2px);
 }
 
+/*
 .radio input[type="radio"] {
   appearance: none;
   width: 20px;
@@ -115,7 +116,7 @@ p {
 .radio input[type="radio"]:checked + * {
   color: #6b5faa;
 }
-
+*/
 
 /* ============================================================
    PAGE CONTAINER (SIDEBAR + MAIN CONTENT)
