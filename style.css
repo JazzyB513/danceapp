@@ -262,3 +262,115 @@ p {
   font-size: 14px;
   color: #666;
 }
+
+/* ============================================================
+   PAYMENT PAGE
+============================================================ */
+
+.payment-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #ffffffbb;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.payment-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 65px;
+  color: #6b5faa;
+  margin-bottom: 20px;
+}
+
+/* Student Card */
+.student-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.student-card:hover {
+  transform: scale(1.02);
+}
+
+.student-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.student-header h2 {
+  margin: 0;
+  color: #6b5faa;
+  font-weight: 700;
+}
+
+.tuition-total {
+  font-size: 22px;
+  font-weight: bold;
+  color: #4a4a4a;
+}
+
+.student-details {
+  margin-top: 15px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.student-details h3 {
+  margin-bottom: 8px;
+  color: #6b5faa;
+  font-size: 20px;
+}
+
+.charges-list,
+.discount-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 15px;
+}
+
+.charges-list li,
+.discount-list li {
+  padding: 5px 0;
+  font-size: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Payment Box */
+.make-payment-box {
+  margin-top: 40px;
+  background: #f7f5ff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.make-payment-box h2 {
+  color: #6b5faa;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.make-payment-box input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  margin-bottom: 15px;
+}
+
+.next-autopay {
+  font-size: 16px;
+  margin-top: 15px;
+  color: #4a4a4a;
+}
