@@ -71,3 +71,13 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.target === modal) modal.style.display = "none";
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const homeBtn = document.getElementById("homeBtn");
+
+    if (homeBtn) {
+        homeBtn.addEventListener("click", function () {
+            window.location.href = "home.html";
+        });
+    }
+});
