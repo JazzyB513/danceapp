@@ -31,6 +31,12 @@ h1 {
 
 p {
   font-family: 'Pacifico', normal;
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+
+.helper {
+  font-family: 'Pacifico', normal;
   font-size: 15px;
   margin-bottom: 20px;
 }
@@ -525,16 +531,6 @@ p {
   display: block;
   text-align: left;
   font-weight: 600;
-  margin-bottom: 5px;
-  color: #f7d1ea;
-}
-
-/* Helper */
-.create-group p {
-  display: block;
-  text-align: left;
-  font-weight: 600;
-  font-size: 15px;
   margin-bottom: 5px;
   color: #f7d1ea;
 }
