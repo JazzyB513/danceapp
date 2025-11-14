@@ -28,20 +28,35 @@
 
     <div id="parentFields" style="display: none;">
 
-          <div id="student-container">
-            <div class="create-group">
-              <label>Student Name</label>
-              <input type="text" name="studentName[]" placeholder="Enter your student's name">
-            </div>
+    <div id="student-container">
 
-            <div class="relationship">
-              <label>Relationship</label>
-              <input type="dropdown" name="realtionship" placeholder="Mother">
-          </div>
-          
-          <button type="button" id="add-student-btn" class="btn">
-            + Add Another Student
-          </button>
+    <div class="student-entry">
+      <div class="create-group">
+        <label>Student Name</label>
+        <input type="text" name="studentName[]" placeholder="Enter student name" required>
+      </div>
+  
+      <div class="create-group">
+        <label>Relationship to Student</label>
+        <select name="relationship[]" required>
+          <option value="">Select relationship</option>
+          <option value="Mother">Mother</option>
+          <option value="Father">Father</option>
+          <option value="Guardian">Guardian</option>
+          <option value="Step-Parent">Step-Parent</option>
+          <option value="Grandparent">Grandparent</option>
+          <option value="Sibling">Sibling</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+    </div>
+  
+  </div>
+  
+  <button type="button" id="add-student-btn" class="btn">
+    + Add Another Student
+  </button>
+
 
       <div class="create-group">
         <label for="address">Address</label>
