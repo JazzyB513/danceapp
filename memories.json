@@ -1,0 +1,31 @@
+{
+  "media": [
+    {
+      "event": "Winter Showcase 2025",
+      "students": ["Ava Johnson", "Sophie Johnson"],
+      "type": "video",
+      "url": "media/winter-showcase/video1.mp4",
+      "title": "Group Dance",
+      "description": "Ava and Sophie performing group routine",
+      "date": "2025-02-14"
+    },
+    {
+      "event": "Winter Showcase 2025",
+      "students": ["Ava Johnson"],
+      "type": "photo",
+      "url": "media/winter-showcase/photo1.jpg",
+      "title": "Solo Performance",
+      "description": "Ava's solo dance moment",
+      "date": "2025-02-14"
+    },
+    {
+      "event": "Spring Recital 2025",
+      "students": ["Sophie Johnson"],
+      "type": "video",
+      "url": "media/spring-recital/video1.mp4",
+      "title": "Sophie’s Solo",
+      "description": "Sophie dancing solo routine",
+      "date": "2025-03-01"
+    }
+  ]
+}
