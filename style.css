@@ -36,6 +36,7 @@ p {
   font-weight: 600;
   transition: background-color 0.3s ease;
   cursor: pointer;
+  outline: none;
 }
 
 .btn:hover, .button:hover {
