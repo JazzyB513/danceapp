@@ -1,0 +1,18 @@
+{
+  "messages": [
+    {
+      "from": "Studio Admin",
+      "to": "Parent",
+      "subject": "Class Update",
+      "body": "Please note the Hip Hop class time has changed to 6:00 PM on Mondays.",
+      "date": "2025-02-12"
+    },
+    {
+      "from": "Parent",
+      "to": "Studio Admin",
+      "subject": "Payment Question",
+      "body": "Can you confirm the balance for Edin for February?",
+      "date": "2025-02-13"
+    }
+  ]
+}
