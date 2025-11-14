@@ -533,6 +533,7 @@ p {
   display: block;
   text-align: left;
   font-weight: 600;
+  font-size: 15px;
   margin-bottom: 5px;
   color: #f7d1ea;
 }
