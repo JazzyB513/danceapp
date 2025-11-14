@@ -3,12 +3,16 @@
     {
       "id": "v1",
       "title": "Ballet Technique 1",
+      "class": "Ballet",
+      "students": ["Edin","Jazzy"],
       "url": "videos/ballet1.mp4",
       "description": "Edin and Jazzy practice basic barre."
     },
     {
       "id": "v2",
       "title": "Hip Hop Routine",
+      "class": "Hip Hop",
+      "students": ["Jazzy"],
       "url": "videos/hiphop1.mp4",
       "description": "Jazzy's hip hop routine rehearsal."
     }
